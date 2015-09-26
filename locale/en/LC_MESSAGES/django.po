@@ -1,0 +1,425 @@
+# NCC 4 Roma translation: Italian -> English.
+# Copyright (C) 20015
+# This file is distributed under the same license as the NCC4ROMA.
+# Simone Federici, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-20 22:07+0000\n"
+"PO-Revision-Date: 2015-09-19 15:30+0000\n"
+"Last-Translator: Simone Federici <s.federici@gmail.com>\n"
+"Language-Team: s.federici@gmail.com\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ncc4roma/settings.py:96
+msgid "Italiano"
+msgstr "Italian"
+
+#: ncc4roma/settings.py:97
+msgid "Inglese"
+msgstr "English"
+
+#: website/models.py:15 website/models.py:53
+msgid "24 ore su 24"
+msgstr "24 hours service"
+
+#: website/models.py:16
+msgid "Trasferimenti aeroportuali"
+msgstr "Airport transfers"
+
+#: website/models.py:17 website/models.py:56
+msgid "Ovunque è necessario"
+msgstr "Wherever you need"
+
+#: website/models.py:18
+msgid "Veicoli accessibili per i disabili"
+msgstr "Wheelchair accessible vehicles"
+
+#: website/models.py:19
+msgid "Black luxury car service"
+msgstr "Black luxury car service"
+
+#: website/models.py:23 website/models.py:42
+msgid "Home"
+msgstr "Home"
+
+#: website/models.py:24
+msgid "Chi Siamo"
+msgstr "Who we are"
+
+#: website/models.py:25 website/models.py:45
+#: website/templates/html/contacts.html:25
+msgid "Servizi"
+msgstr "Services"
+
+#: website/models.py:27 website/models.py:47
+#: website/templates/tpl/base.html:191
+msgid "Contatti"
+msgstr "Contact"
+
+#: website/models.py:27
+msgid "Invia una richiesta"
+msgstr "Submit a request"
+
+#: website/models.py:27 website/templates/tpl/base.html:204
+msgid "Seguici"
+msgstr "Follow us"
+
+#: website/models.py:40
+msgid "Pagina non trovata"
+msgstr "Page not Found"
+
+#: website/models.py:42
+msgid ""
+"NCC 4 Roma vi porta a visitare per Roma in auto, risolve tutti i problemi "
+"logistici, spostamenti dagli aereoporti, visite a Roma e nei dintorni"
+msgstr ""
+"NCC 4 Rome help you to visit to Rome by car. We solve all the logistic "
+"issues.  Airports transfers. Tours of Rome and surrounding area"
+
+#: website/models.py:42
+msgid "noleggio con conducente roma autisti fidati"
+msgstr "Chauffeur trust drivers roma"
+
+#: website/models.py:43
+msgid "Chi siamo"
+msgstr "Who we are"
+
+#: website/models.py:43
+msgid ""
+"La capacità di muoverci dentro Roma con la maneggevolezza di un Taxi ma con "
+"un parco auto di lusso, sintomo della cura che abbiamo per coloro che ci "
+"scelgono."
+msgstr ""
+"The ability to move in Rome with the handling of a taxi but with a fleet of "
+"luxury cars, a sign of the care that we have for those who choose us."
+
+#: website/models.py:43
+msgid "keys"
+msgstr "keys"
+
+#: website/models.py:45
+msgid ""
+"Tutti i nostri servizi pensati esclusivamente per voi, non ci sono paragoni."
+msgstr "All our services designed exclusively for you, there is no comparison."
+
+#: website/models.py:45
+msgid "servizi auto noleggio con conducente"
+msgstr "services car hire with driver"
+
+#: website/models.py:46
+msgid "Offerte Speciali"
+msgstr "Our Specials"
+
+#: website/models.py:46
+msgid ""
+"Le offerte speciali della nostra attività, in giro per roma e dintorni "
+"accompagnati da un autista fidato."
+msgstr ""
+"Specials of our business, around Rome and surroundings accompanied by a "
+"trusted driver."
+
+#: website/models.py:46
+msgid "offerte speciali noleggio con conducente roma"
+msgstr "special offers chauffeur roma"
+
+#: website/models.py:47
+msgid ""
+"In questa sezione puoi prendere contatto con noi, prenotare visite guidate, "
+"trasferimenti dagli aereoporti"
+msgstr ""
+"This is where you make contact with us, book tours, transfers from the "
+"airports"
+
+#: website/models.py:47
+msgid "contatti telefono email ncc roma noleggio autista auto"
+msgstr "contact phone email ncc rome rental car driver"
+
+#: website/models.py:48
+msgid "Ricerca"
+msgstr "Search"
+
+#: website/models.py:48
+msgid ""
+"Puoi trovare tutte le informazioni che ti occorrono spostarti a Roma tramite "
+"i nostri servizi usando il motore di ricerca di NCC 4 ROMA"
+msgstr ""
+"You can find all the information you need to move to Rome through our "
+"services using the search engine NCC 4 ROME"
+
+#: website/models.py:48
+msgid "ricerca noleggio conducente roma"
+msgstr "Search rental driver rome"
+
+#: website/models.py:49
+msgid "Risultati"
+msgstr "Results"
+
+#: website/models.py:49
+msgid "Risutati della ricerca per noleggio con conducente a Roma"
+msgstr "Needed results of the search for rental with driver in Rome"
+
+#: website/models.py:49
+msgid "risultati noleggio con conducente roma"
+msgstr "results chauffeur roma"
+
+#: website/models.py:50 website/templates/tpl/base.html:240
+msgid "Informativa sulla privacy"
+msgstr "Privacy Policy"
+
+#: website/models.py:50
+#, fuzzy
+#| msgid "Risutati della ricerca per noleggio con conducente a Roma"
+msgid "informativa sulla privacy conducente a Roma"
+msgstr "Needed results of the search for rental with driver in Rome"
+
+#: website/models.py:50
+msgid "privacy"
+msgstr "privacy"
+
+#: website/models.py:52
+msgid "trasferimenti aeroportuali"
+msgstr "airport transfers"
+
+#: website/models.py:52
+msgid "trasferimenti collegamenti roma ciampino fiumicino roma aziende"
+msgstr "transfers links Rome Ciampino Rome Fiumicino companies"
+
+#: website/models.py:54
+msgid "Autovetture nere e eleganti"
+msgstr "Black luxury car service"
+
+#: website/models.py:55
+msgid "Autovetture attrezzate per i disabili"
+msgstr "Wheelchair accessible vehicles"
+
+#: website/templates/html/404.html:7
+msgid "Oops! ... Crash! ... Pop! ... Puff! ... Boom!"
+msgstr "Oops! ... Crash! ... Pop! ... Puff! ... Boom!"
+
+#: website/templates/html/404.html:13
+msgid "PAGINA NON TROVATA"
+msgstr "PAGE NOT FOUND"
+
+#: website/templates/html/404.html:18
+#, fuzzy
+#| msgid ""
+#| "Ezechiele 25.17: \"Il cammino dell'uomo timorato è minacciato da ogni "
+#| "parte dalle iniquità degli esseri egoisti e dalla tirannia degli uomini "
+#| "malvagi. Benedetto sia colui che nel nome della carità e della buona "
+#| "volontà conduce i deboli attraverso la valle delle tenebre; perché egli è "
+#| "in verità il pastore di suo fratello e il ricercatore dei figli smarriti. "
+#| "E la mia giustizia calerà sopra di loro con grandissima vendetta e "
+#| "furiosissimo sdegno su coloro che si proveranno ad ammorbare ed infine a "
+#| "distruggere i miei fratelli. E tu saprai che il mio nome è quello del "
+#| "Signore quando farò calare la mia vendetta sopra di te\". (Jules "
+#| "Winnfield)\n"
+msgid ""
+"\n"
+"        Ezechiele 25.17: \"Il cammino dell'uomo timorato è minacciato da "
+"ogni parte dalle iniquità degli esseri egoisti e dalla tirannia degli uomini "
+"malvagi. Benedetto sia colui che nel nome della carità e della buona volontà "
+"conduce i deboli attraverso la valle delle tenebre; perché egli è in verità "
+"il pastore di suo fratello e il ricercatore dei figli smarriti. E la mia "
+"giustizia calerà sopra di loro con grandissima vendetta e furiosissimo "
+"sdegno su coloro che si proveranno ad ammorbare ed infine a distruggere i "
+"miei fratelli. E tu saprai che il mio nome è quello del Signore quando farò "
+"calare la mia vendetta sopra di te\". (Jules Winnfield)\n"
+"      "
+msgstr ""
+"Ezekiel 25.17: \"The path of the righteous man is beset on all sides by the "
+"iniquities of the selfish and the tyranny of evil men.Blessed is he who, in "
+"the name of charity and good will, shepherds the weak through the valley of "
+"darkness, for he is truly his brother's keeper and the finder of lost "
+"children. And I will strike down upon thee with great vengeance and furious "
+"anger those who attempt to poison and destroy my brothers. And you will know "
+"my name is the Lord when I lay my vengeance upon thee. \". (Jules "
+"Winnfield) \n"
+
+#: website/templates/html/contacts.html:7
+#, fuzzy
+#| msgid "Chi Siamo"
+msgid "Dove Siamo"
+msgstr "Who we are"
+
+#: website/templates/html/contacts.html:16
+msgid "Roma, Città Metropolitana di Roma, Italia"
+msgstr "Rome, the Metropolitan City of Rome, Italy"
+
+#: website/templates/html/contacts.html:17
+#, fuzzy
+#| msgid "Telefono"
+msgid "Telephone"
+msgstr "Call us"
+
+#: website/templates/html/contacts.html:18
+#, fuzzy
+#| msgid "Email"
+msgid "E-mail"
+msgstr "Email us"
+
+#: website/templates/html/contacts.html:31
+#: website/templates/html/index.html:155 website/templates/html/index.html:220
+#: website/templates/tpl/base.html:184
+#, fuzzy
+#| msgid "Offerte Speciali"
+msgid "Speciali"
+msgstr "Our Specials"
+
+#: website/templates/html/contacts.html:39
+msgid "Scrivici e verrai ricontattato"
+msgstr "Write to us and we will contact you"
+
+#: website/templates/html/contacts.html:40
+msgid "Loading..."
+msgstr "Loading ..."
+
+#: website/templates/html/index.html:105
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "\t\t\t\t\t\t<div class=\"txt1\">Affidabilità</div>\n"
+#| "\t\t\t\t\t\t<div class=\"txt2\">tutti i giorni<br>24 ore al giorno</div>\n"
+msgid ""
+"\n"
+"\t\t\t\t\t\t<div class=\"txt1\">Affidabilità</div>\n"
+"\t\t\t\t\t\t<div class=\"txt2\">tutti i giorni<br>24 ore al giorno</div>\n"
+"                        "
+msgstr ""
+"\n"
+"\t\t\t\t\t\t <div class=\"txt1\">Reliability</div>\n"
+"\t\t\t\t\t\t<div class=\"txt2\">everyday <br> 24 hours </div>\n"
+
+#: website/templates/html/index.html:109 website/templates/html/index.html:125
+#: website/templates/html/index.html:141 website/templates/html/index.html:172
+#: website/templates/html/index.html:206 website/templates/html/index.html:225
+msgid "dettagli"
+msgstr "details"
+
+#: website/templates/html/index.html:121
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "\t\t\t\t\t\t<div class=\"txt1\">Affidabilità</div>\n"
+#| "\t\t\t\t\t\t<div class=\"txt2\">tutti i giorni<br>24 ore al giorno</div>\n"
+msgid ""
+"\n"
+"\t\t\t\t\t\t<div class=\"txt1\">Airport</div>\n"
+"\t\t\t\t\t\t<div class=\"txt2\">transfer</div>\n"
+"                        "
+msgstr ""
+"\n"
+"\t\t\t\t\t\t <div class=\"txt1\">Reliability</div>\n"
+"\t\t\t\t\t\t<div class=\"txt2\">everyday <br> 24 hours </div>\n"
+
+#: website/templates/html/index.html:137
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "\t\t\t\t\t\t<div class=\"txt1\">Affidabilità</div>\n"
+#| "\t\t\t\t\t\t<div class=\"txt2\">tutti i giorni<br>24 ore al giorno</div>\n"
+msgid ""
+"\n"
+"\t\t\t\t\t\t<div class=\"txt1\">We will take you</div>\n"
+"\t\t\t\t\t\t<div class=\"txt2\">Wherever<br>you need</div>\n"
+"                        "
+msgstr ""
+"\n"
+"\t\t\t\t\t\t <div class=\"txt1\">Reliability</div>\n"
+"\t\t\t\t\t\t<div class=\"txt2\">everyday <br> 24 hours </div>\n"
+
+#: website/templates/html/index.html:202
+msgid ""
+"\n"
+"                I nostri servizi di noleggio con conducente sono disponibili "
+"24 ore al giorno, 365 giorni l'anno, con tariffe personalizzate e "
+"competitive non soggette a variazioni dovute al traffico. Tutte le auto sono "
+"recenti, dotati di ogni optional per viaggiare comodi in totale sicurezza "
+"con auto nuove sempre in ordine e regolarmente controllate. Per la vostra e "
+"la nostra sicurezza tutte le auto sono assicurate con massimali al vertice "
+"della categoria.\n"
+"                "
+msgstr ""
+
+#: website/templates/html/index.html:214
+#, fuzzy
+#| msgid "Servizi"
+msgid "Nuovi Servizi"
+msgstr "Services"
+
+#: website/templates/tpl/base.html:72 website/templates/tpl/base.html:183
+#, fuzzy
+#| msgid "Prenota Subito"
+msgid "Prenota Online"
+msgstr "Book Online"
+
+#: website/templates/tpl/base.html:74
+msgid "Telefono"
+msgstr "Call us"
+
+#: website/templates/tpl/base.html:75
+msgid "Email"
+msgstr "Email us"
+
+#: website/templates/tpl/base.html:84
+msgid "Cerca"
+msgstr "Search"
+
+#: website/templates/tpl/base.html:153
+#, python-format
+msgid ""
+"Prenota <a href=\"contacts.html#contact\">ONLINE</a> o Chiama il <b style="
+"\"white-space:nowrap\">%(phone)s</b>"
+msgstr ""
+
+#: website/templates/tpl/base.html:177
+msgid "I nostri servizi"
+msgstr "Our Services"
+
+#: website/templates/tpl/base.html:196
+msgid "Scrivici"
+msgstr "Contact us"
+
+#: website/templates/tpl/base.html:197
+msgid "Dove?"
+msgstr "Where?"
+
+#: website/templates/tpl/base.html:197
+msgid "Roma"
+msgstr "Rome"
+
+#~ msgid "Ovunque è necesario"
+#~ msgstr "Wherever you need"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Privacy Policy"
+
+#~ msgid "Autovetture"
+#~ msgstr "Our fleet"
+
+#~ msgid ""
+#~ "Le nostre autovetture sono ben tenute, pulite, eleganti, spaziose, "
+#~ "sileziose, confortevoli e piacevolmente rilassanti."
+#~ msgstr ""
+#~ "Our cars are well maintained, clean, elegant, spacious, sileziose, "
+#~ "comfortable and pleasantly relaxing."
+
+#~ msgid "automobili noleggio con conducente"
+#~ msgstr "Car rental with driver"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgid "Email us"
+#~ msgstr "Email us"
+
+#~ msgid "Offerte"
+#~ msgstr "Specials"
+
+#~ msgid "Contattaci"
+#~ msgstr "Contact"

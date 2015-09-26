@@ -1,0 +1,43 @@
+{% extends 'tpl/base.html' %}{% load staticfiles i18n %}
+
+{% block content %}
+<div class="row">
+<div class="span9">
+	
+<h2>{% trans 'Dove Siamo' %}</h2>
+
+<figure class="google_map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d380084.9097062956!2d12.44124083203124!3d41.90547195990842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196f9928ebb%3A0xb90f770693656e38!2sRome!5e0!3m2!1sen!2sit!4v1442761511597" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</figure>
+
+<h3>NCC 4 ROMA</h3>
+
+<p>
+{% trans 'Roma, Città Metropolitana di Roma, Italia' %}<br>
+{% trans 'Telephone' %}: {{ phone }}<br>
+{% trans 'E-mail' %}: <a href="#contact">{{ email }}</a>
+</p>
+
+
+</div>
+<div class="span3">
+	
+<h2>{% trans 'Servizi' %}</h2>
+
+<ul class="ul1">
+    {% for service in services %}
+	<li><a href="{{ service.url }}">{{ service.name }}</a></li>
+    {% endfor %}
+    {% if specials %}<li><a href="specials.html">{% trans 'Speciali' %}</a></li>{% endif %}
+</ul>
+</div>
+</div>
+
+<div class="row">
+<div class="span12">
+<a name="contact" ></a>
+<h2>{% trans 'Scrivici e verrai ricontattato' %}</h2>
+<iframe src="https://docs.google.com/forms/d/1JxDBOAEabzQL4WP0PD-U-BoYEnHnEvQG4zm2VLJ1WX0/viewform?embedded=true" style="max-width: 800px; min-width: 350px;" width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">{% trans 'Loading...' %}</iframe>
+</div>
+</div>
+{% endblock %}

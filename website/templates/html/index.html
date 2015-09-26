@@ -1,0 +1,229 @@
+{% extends 'tpl/base.html' %}{% load staticfiles i18n %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/jquery.caroufredsel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+
+<script>
+$(document).ready(function() {
+	//
+	//carufredsel main
+	$('#caroufredsel_slider1').carouFredSel({
+		auto: {
+			timeoutDuration: 9000
+		},
+		responsive: true,
+		direction:	"left",
+		//prev: '.prev1',
+		//next: '.next1',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo",
+			fx: "fade"
+		},
+		items: {
+        	width: '1000',
+			height: 'variable',	//	optionally resize item-height
+			visible: {
+				min: 1,
+				max: 1
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			},
+		pagination  : ".pagination1"
+
+
+	});
+
+	//	carouFredSel specials
+	$('#specials .carousel.main ul').carouFredSel({
+		auto: {
+			timeoutDuration: 8000
+		},
+		responsive: true,
+		prev: '.specials_prev',
+		next: '.specials_next',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo"
+		},
+		items: {
+        	width: '350',
+			height: 'variable',	//	optionally resize item-height
+			visible: {
+				min: 1,
+				max: 3
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			}
+	});
+
+
+
+
+
+	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+	function updateSizes_vat(){
+		$('#caroufredsel_slider1').trigger("updateSizes");
+		$('#specials .carousel.main ul').trigger("updateSizes");
+
+	}
+	updateSizes_vat();
+
+
+}); //
+$(window).load(function() {
+	//
+
+}); //
+</script>
+{% endblock %}
+
+
+{% block top %}
+<div class="caroufredsel_slider1_wrapper">
+	<ul id="caroufredsel_slider1" class="clearfix">
+		<li>
+			<div class="caroufredsel_slide1 clearfix">
+				<div class="block1">
+					<figure><img src="{% static 'img/slide02.jpg' %}" alt="" class="img"></figure>
+				</div>
+				<div class="block2">
+					<div class="caption">
+                        {% blocktrans %}
+						<div class="txt1">Affidabilità</div>
+						<div class="txt2">tutti i giorni<br>24 ore al giorno</div>
+                        {% endblocktrans %}
+						<a href="service-24-hours.html" class="button0">{% trans 'dettagli' %}</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="caroufredsel_slide1 clearfix">
+				<div class="block1">
+					<figure><img src="{% static 'img/slide03.jpg' %}" alt="" class="img"></figure>
+				</div>
+				<div class="block2">
+					<div class="caption">
+                        {% blocktrans %}
+						<div class="txt1">Airport</div>
+						<div class="txt2">transfer</div>
+                        {% endblocktrans %}
+						<a href="service-transfer.html" class="button0">{% trans 'dettagli' %}</a>
+					</div>
+				</div>
+			</div>
+		</li>
+        <li>
+			<div class="caroufredsel_slide1 clearfix">
+				<div class="block1">
+					<figure><img src="{% static 'img/slide01.jpg' %}" alt="" class="img"></figure>
+				</div>
+				<div class="block2">
+					<div class="caption">
+                        {% blocktrans %}
+						<div class="txt1">We will take you</div>
+						<div class="txt2">Wherever<br>you need</div>
+                        {% endblocktrans %}
+						<a href="service-wherever-you-need.html" class="button0">{% trans 'dettagli' %}</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="pagination1" id="caroufredsel_pag1"></div>
+</div>
+{% endblock %}
+
+{% block center %}
+{% if specials %}
+<div id="specials_wrapper">
+<div class="container">
+<div class="specials_title">{% trans 'Speciali' %}:</div>
+<div id="specials">
+<a class="specials_prev" href="#"></a>
+<a class="specials_next" href="#"></a>
+<div class="carousel-box">
+	<div class="inner">
+		<div class="carousel main">
+			<ul>
+                {% for special in specials %}
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="{{ special.url }}">
+								<div class="caption">
+									<div class="txt1">{{ special.name }}</div>
+									<div class="txt2">{{ special.summary }}</div>
+									<div class="txt3">{{ special.description }}</div>
+									<div class="txt4">{% trans 'dettagli' %}</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+{% endif %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="row">
+<div class="span8">
+
+<h2>welcome</h2>
+
+<div class="thumb1">
+	<div class="thumbnail clearfix">
+		<figure class="img-polaroid"><img src="{% static 'img/home01.jpg' %}" alt=""></figure>
+		<div class="caption">
+			<p>
+                {% blocktrans %}
+                I nostri servizi di noleggio con conducente sono disponibili 24 ore al giorno, 365 giorni l'anno, con tariffe personalizzate e competitive non soggette a variazioni dovute al traffico. Tutte le auto sono recenti, dotati di ogni optional per viaggiare comodi in totale sicurezza con auto nuove sempre in ordine e regolarmente controllate. Per la vostra e la nostra sicurezza tutte le auto sono assicurate con massimali al vertice della categoria.
+                {% endblocktrans %}
+			</p>
+			<a href="services.html" class="button1">{% trans 'dettagli' %}</a>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="span4">
+
+<h2>{% trans 'Nuovi Servizi' %}</h2>
+
+<ul class="ul1">
+    {% for service in services %}
+	    <li><a href="{{ service.url }}">{{ service.name }}</a></li>
+    {% endfor %}
+    <li><a href="specials.html">{% trans 'Speciali' %}</a></li>
+</ul>
+
+<br>
+
+<a href="services.html" class="button1">{% trans 'dettagli' %}</a>
+
+</div>
+</div>
+{% endblock %}

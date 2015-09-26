@@ -1,0 +1,42 @@
+{% load staticfiles i18n %}
+<!DOCTYPE HTML>
+<html lang="{{ LANGUAGE_CODE }}" class="iframe">
+<head>
+	<title>Search results</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="screen">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+	<link rel="stylesheet" href="{% static 'css/search.css' %}" type="text/css" media="screen">
+
+</head>
+<body>
+<script type="text/javascript">
+;(function(){	
+	document.body.onload=resize
+	window.onresize=resize
+	
+	function resize(){
+		parent._resize(document.getElementById('search-results').offsetHeight)
+	}
+})()
+</script>
+
+	<div id="search-results">
+		<ol class="search_list">
+
+	    {% for result in results %}
+
+			<li>
+				<h6 class="search_title"><a target="_top" href="{{ result.url }}" class="search_link"> {{ result.title }} </a></h6>
+				...{{ result.summary }}...
+				<span class="match">Terms matched: {{ result.count}} - URL: {{ result.url }}</span>
+			</li>
+		{% empty %}
+			<h6>No results found for <span class="search">{{ s }} </span></h6>
+		{% endfor %}
+
+		</ol>
+	</div>
+
+</body>
+</html>

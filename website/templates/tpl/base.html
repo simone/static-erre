@@ -1,0 +1,250 @@
+{% load staticfiles i18n erre %}<!DOCTYPE html>
+{% get_language_info for LANGUAGE_CODE as lang %}
+{% get_language_info_list for LANGUAGES as languages %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <title>{{ title }}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="author" content="{{ author }}">
+    <meta http-equiv="content-language" content="{{ LANGUAGE_CODE }}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+
+    {% for l in languages %}
+        {% if l != lang %}
+            <link rel="alternate" href="/{{ l.code }}/{{ page_name }}" hreflang="{{ l.code }}" />
+        {% endif %}
+    {% endfor %}
+
+    {% block meta %}
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-responsive.min.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="screen">
+
+    {% block css %}
+    {% endblock %}
+
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/superfish.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.ui.totop.js' %}"></script>
+
+
+    {% block js %}
+    {% endblock %}
+
+    <script>
+        $(document).ready(function() {
+        });
+    </script>
+
+<!--[if lt IE 8]>
+		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>  
+	<![endif]-->    
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+  <link rel="stylesheet" href="{% static 'css/ie.css' %}" type="text/css" media="screen">
+<![endif]-->
+</head>
+
+<body class="front">
+<div id="main">
+
+<div class="bg1"><img src="{% static 'img/bg1.jpg' %}" alt="" class="img"><div class="pattern1"></div></div>
+
+<div class="top1_wrapper">
+<div class="top1_inner">
+<div class="container">
+<div class="top1 clearfix">
+	
+<div class="top2 clearfix">
+	
+<header><div class="logo_wrapper"><a href="/index.html" class="logo"><img src="{% static 'img/logo.png' %}" alt=""></a></div></header>
+
+<div class="block2 clearfix">
+<div class="book1_wrapper"><a href="contacts.html#contact" class="book1"><span>{% trans 'Prenota Online' %}</span></a></div>
+<div class="phone1">
+	{% trans 'Telefono' %} <span style="white-space:nowrap">{{ phone }}</span><br>
+    {% trans 'Email' %} <a href="contacts.html#contact">{{ email }}</a>
+</div>
+</div>
+
+</div>
+
+<div class="menu_wrapper">
+<div class="search-form-wrapper">
+<form id="search-form" action="/{{ LANGUAGE_CODE }}/search.html" method="GET" accept-charset="utf-8" class="navbar-form" >
+						<input type="text" name="s" value="{% trans 'Cerca' %}" onBlur="if(this.value=='') this.value='{% trans 'Cerca' %}'" onFocus="if(this.value =='{% trans 'Cerca' %}' ) this.value=''">
+						<a href="#" onClick="document.getElementById('search-form').submit()"></a>
+					</form>
+</div>
+<div class="navbar navbar_">
+	<div class="navbar-inner navbar-inner_">
+		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<div class="nav-collapse nav-collapse_ collapse">
+            <ul class="nav sf-menu clearfix">
+            {% for item in menu %}
+                <li class="{{ item|menu1_class:page_name }}"><a href="{{ item.url }}">{{ item.name }}</a>
+                {% if item.submenu %}
+                    <ul>
+                        {% for item2 in item.submenu %}
+                            <li class="{{ item2|menu2_class:page_name }}"><a href="{{ item2.url }}">{{ item2.name }}</a></li>
+                            {% if item2.submenu %}
+                                <ul>
+                                {% for item3 in item2.submenu %}
+                                    <li class="{{ item3|menu_class:page_name }}"><a href="{{ item3.url }}">{{ item3.name }}</a></li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                </li>
+            {% endfor %}
+                <li class="sub-menu sub-menu-1"><a href="#">{% flag lang %}</a>
+                    <ul>
+                    {% for l in languages %}
+                        {% if l.code != lang.code %}
+                            <li><a href="/{{ l.code }}/{{ page_name }}">{% flag l %}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+		</div>
+	</div>
+</div>
+</div>
+
+    {% block top %}{% endblock %}
+
+</div>	
+</div>	
+</div>	
+<div class="hl1"></div>
+</div>
+
+<div class="center1_wrapper">
+<div class="center1_inner">
+
+    {% block center %}
+        <div class="h1_wrapper">
+        <div class="container">
+        <h1>{{ page.name }}</h1>
+        </div>
+        </div>
+    {% endblock %}
+
+<div class="hl2 clearfix"></div>
+
+<div class="slogan1_wrapper clearfix">
+<div class="container">
+<div class="slogan1">{% blocktrans %}Prenota <a href="contacts.html#contact">ONLINE</a> o Chiama il <b style="white-space:nowrap">{{ phone }}</b>{% endblocktrans %}</div>
+</div>
+</div>
+
+
+<div id="content">
+<div class="container">
+
+{% block content %}{% endblock %}
+
+</div>
+</div>	
+
+    {% block bottom %}{% endblock %}
+
+</div>
+<div class="hl3"></div>
+</div>
+
+<div class="bot1">
+<div class="container">
+<div class="row">
+<div class="span4">
+	
+<div class="bot1_title">{% trans 'I nostri servizi' %}</div>
+
+<ul class="ul0">
+    {% for service in services %}
+	    <li><a href="{{ service.url }}">{{ service.name }}</a></li>
+    {% endfor %}
+	<li><a href="contacts.html#contact">{% trans 'Prenota Online' %}</a></li>
+	{% if specials %}<li><a href="specials.html">{% trans 'Speciali' %}</a></li>{% endif %}
+</ul>
+
+</div>
+
+<div class="span5">
+	
+<div class="bot1_title">{% trans 'Contatti' %}</div>
+
+<div class="phone2">{{ phone }}</div>
+
+<div class="contacts1">
+<div class="txt clearfix"><div class="txt1">{% trans 'Scrivici' %}:</div><div class="txt2"><a href="contacts.html#contact">{{ email }}</a></div></div>
+<div class="txt clearfix"><div class="txt1">{% trans 'Dove?' %}:</div><div class="txt2">{% trans 'Roma' %}</div></div>
+</div>
+
+</div>
+<div class="span3">
+
+<a name="follow-us"></a>
+<div class="bot1_title">{% trans 'Seguici' %}</div>
+
+<div class="social_wrapper">
+	<ul class="social clearfix">    
+	    <li>
+	    	<a href="#" class="clearfix">
+	    		<img src="{% static 'img/social_ic1.png' %}">
+	    		<div class="caption">Twitter</div>
+	    	</a>
+		</li>
+		<li>
+	    	<a href="#" class="clearfix">
+	    		<img src="{% static 'img/social_ic2.png' %}">
+	    		<div class="caption">Facebook</div>
+	    	</a>
+		</li>
+		<li>
+	    	<a href="#" class="clearfix">
+	    		<img src="{% static 'img/social_ic3.png' %}">
+	    		<div class="caption">Google +</div>
+	    	</a>
+		</li>
+  
+	</ul>
+</div>
+
+</div>	
+</div>	
+</div>	
+</div>
+
+<div class="bot2">
+<div class="container">
+<div class="row">
+<div class="span12">
+	
+<footer><div class="copyright">Copyright &copy; 2015. NCC 4 ROMA &nbsp; / &nbsp; <a href="privacy.html">{% trans 'Informativa sulla privacy' %}</a></div></footer>
+	
+</div>	
+</div>	
+</div>	
+</div>
+	
+</div>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

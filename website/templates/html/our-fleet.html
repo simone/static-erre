@@ -1,0 +1,209 @@
+{% extends 'tpl/base.html' %}{% load staticfiles i18n %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/touchTouch.css' %}" type="text/css" media="screen">
+<link rel="stylesheet" href="{% static 'css/isotope.css' %}" type="text/css" media="screen">
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/touchTouch.jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.isotope.min.js' %}"></script>
+
+<script>
+$(document).ready(function() {
+	//
+	
+
+	
+
+
+}); //
+$(window).load(function() {
+	//
+
+	// isotop
+	var $container = $('#isotope-items'),
+		$optionSet = $('#isotope-options'), 
+	    $optionSets = $('#isotope-filters'), 
+	    $optionLinks = $optionSets.find('a'); 
+    $container.isotope({ 
+        filter: '*',
+        layoutMode: 'fitRows'
+    });  
+   	$optionLinks.click(function(){ 
+   		var $this = $(this); 
+    	// don't proceed if already selected 
+		if ( $this.hasClass('selected') ) { 
+			return false; 
+		}    		
+   		$optionSet.find('.selected').removeClass('selected'); 
+   		$this.addClass('selected');
+
+        var selector = $(this).attr('data-filter'); 
+        $container.isotope({ 
+            filter: selector            
+        }); 
+      	return false; 
+    });    	
+	$(window).on("resize", function( event ) {	
+		$container.isotope('reLayout');		
+	});		
+
+	// touchTouch
+	$('.thumb-isotope .thumbnail a').touchTouch();
+
+}); //
+</script>
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+<div class="span12">
+	
+<h2>Our Photo</h2>
+
+<div id="isotope-options">
+    <ul id="isotope-filters" class="clearfix">
+        <li><a href="#" class="selected" data-filter="*">Show All</a></li> 
+        <li><a href="#" data-filter=".isotope-filter1">Category 1</a></li> 
+        <li><a href="#" data-filter=".isotope-filter2">Category 2</a></li> 
+        <li><a href="#" data-filter=".isotope-filter3">Category 3</a></li> 	             
+    </ul>            
+</div>
+
+<ul class="thumbnails" id="isotope-items">		  
+    <li class="span4 isotope-element isotope-filter1">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery01.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter2">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery02.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter3">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery03.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter1">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery04.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter2">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery05.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter3">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery06.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter1">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery07.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter2">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery08.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+    <li class="span4 isotope-element isotope-filter3">
+		<div class="thumb-isotope">
+			<div class="thumbnail clearfix">
+				<a href="{% static 'img/blank.png' %}">
+					<figure>
+						<img src="{% static 'img/gallery09.jpg' %}" alt=""><em></em>
+					</figure>
+					<div class="caption">							
+						Suspendisse accumsan dolor 
+					</div>
+				</a>				
+			</div>
+		</div>
+    </li>
+       
+</ul>
+
+
+</div>	
+</div>
+{% endblock %}
+

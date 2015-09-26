@@ -1,0 +1,210 @@
+{% extends 'tpl/base.html' %}{% load staticfiles i18n %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/jquery.caroufredsel.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+
+<script>
+$(document).ready(function() {
+	//
+
+
+	//	carouFredSel specials
+	$('#specials .carousel.main ul').carouFredSel({
+		auto: {
+			timeoutDuration: 8000
+		},
+		responsive: true,
+		prev: '.specials_prev',
+		next: '.specials_next',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo"
+		},
+		items: {
+        	width: '350',
+			height: 'variable',	//	optionally resize item-height
+			visible: {
+				min: 1,
+				max: 3
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			}
+	});
+
+
+
+
+
+	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+	function updateSizes_vat(){
+
+		$('#specials .carousel.main ul').trigger("updateSizes");
+
+	}
+	updateSizes_vat();
+
+
+}); //
+$(window).load(function() {
+	//
+
+}); //
+</script>
+{% endblock %}
+
+
+{% block center %}
+<div id="specials_wrapper">
+<div class="container">
+<div class="specials_title">Our Specials:</div>	
+<div id="specials">
+<a class="specials_prev" href="#"></a>
+<a class="specials_next" href="#"></a>		
+<div class="carousel-box">
+	<div class="inner">			
+		<div class="carousel main">
+			<ul>
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="#">								
+								<div class="caption">
+									<div class="txt1">GET DISCOUNT</div>
+									<div class="txt2">for your next<br>booking</div>
+									<div class="txt3">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									<div class="txt4">details</div>
+								</div>																
+							</a>
+						</div>						
+					</div>
+				</li>
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="#">								
+								<div class="caption">
+									<div class="txt1">GET DISCOUNT</div>
+									<div class="txt2">with online<br>reservation</div>
+									<div class="txt3">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									<div class="txt4">details</div>
+								</div>																
+							</a>
+						</div>						
+					</div>
+				</li>
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="#">								
+								<div class="caption">
+									<div class="txt1">private</div>
+									<div class="txt2">tour and<br>excursion</div>
+									<div class="txt3">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									<div class="txt4">details</div>
+								</div>																
+							</a>
+						</div>						
+					</div>
+				</li>
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="#">								
+								<div class="caption">
+									<div class="txt1">GET DISCOUNT</div>
+									<div class="txt2">for your next<br>booking</div>
+									<div class="txt3">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									<div class="txt4">details</div>
+								</div>																
+							</a>
+						</div>						
+					</div>
+				</li>
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="#">								
+								<div class="caption">
+									<div class="txt1">GET DISCOUNT</div>
+									<div class="txt2">with online<br>reservation</div>
+									<div class="txt3">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									<div class="txt4">details</div>
+								</div>																
+							</a>
+						</div>						
+					</div>
+				</li>
+				<li>
+					<div class="specials">
+						<div class="specials_inner">
+							<a href="#">								
+								<div class="caption">
+									<div class="txt1">private</div>
+									<div class="txt2">tour and<br>excursion</div>
+									<div class="txt3">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									<div class="txt4">details</div>
+								</div>																
+							</a>
+						</div>						
+					</div>
+				</li>																																			
+			</ul>
+		</div>
+	</div>
+</div>
+</div>	
+</div>	
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="span12">
+	
+<h2>How to be our partners</h2>
+
+<p>
+	Ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. 
+</p>
+
+<p>
+	Aenean semper aliquet libero. In ante velit, cursus ut, ultrices vitae, tempor ut, risus. Duis pulvinar. Vestibulum vel pede at sapien sodales mattis. Quisque pretium, lacus nec iaculis vehicula, arcu libero consectetuer massa, auctor aliquet mauris ligula id ipsum. Vestibulum pede. Maecenas sit amet augue. Sed blandit lectus eget lectus.   In euismod neque nec tellus faucibus imperdiet. Nulla nunc elit, dapibus sed erat in, dapibus tincidunt lacus. Nullam ligula sapien, rhoncus et mi tempus, placerat venenatis tellus. Duis in malesuada turpis, a rhoncus augue. Mauris dapibus faucibus ante, tristique sollicitudin nibh hendrerit aliquet. 
+</p>
+
+<br>
+
+<div class="date1 clearfix">
+<div class="txt1">1</div>	
+<div class="txt2">
+<h3>ibendum vehicula ultricies. Mauris fermentum orci non lorem blandit, at ullamcorper felis sodales. Nunc at nunc eros. Suspendisse accumsan dolor vitae libero ultricies tristique. Suspendisse potenti. </h3>	
+<p>Ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. </p>
+</div>
+</div>
+
+<div class="date1 clearfix">
+<div class="txt1">2</div>	
+<div class="txt2">
+<h3>vehicula ultricies. Mauris fermentum orci non lorem blandit, at ullamcorper felis sodales. Nunc at nunc eros. Suspendisse accumsan dolor vitae libero ultricies tristique. Suspendisse potenti. </h3>	
+<p>Ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. </p>
+</div>
+</div>
+
+<div class="date1 clearfix">
+<div class="txt1">3</div>	
+<div class="txt2">
+<h3>Lectus. Duis bibendum vehicula ultricies. Mauris fermentum orci non lorem blandit, at ullamcorper felis sodales. Nunc at nunc eros. Suspendisse accumsan dolor vitae libero ultricies tristique. Suspendisse potenti. </h3>	
+<p>Ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat consectetuer adipiscing elit. Nunc suscipit. Suspendisse enim arcu, convallis non, cursus sed, dignissim et, est. </p>
+</div>
+</div>
+
+</div>	
+</div>
+{% endblock %}

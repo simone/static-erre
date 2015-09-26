@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <title>NCC 4 ROMA</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NCC 4 Rome help you to visit to Rome by car. We solve all the logistic issues.  Airports transfers. Tours of Rome and surrounding area">
+    <meta name="keywords" content="Chauffeur trust drivers roma">
+    <meta name="author" content="Riccardo Federici">
+    <meta http-equiv="content-language" content="en">
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+
+    
+        
+            <link rel="alternate" href="../index.html" hreflang="it" />
+        
+    
+        
+    
+
+    
+    
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen">
+
+    
+    
+
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../static/js/superfish.js"></script>
+    <script type="text/javascript" src="../static/js/jquery.ui.totop.js"></script>
+
+
+    
+<script type="text/javascript" src="../static/js/jquery.caroufredsel.js"></script>
+<script type="text/javascript" src="../static/js/jquery.touchSwipe.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	//
+	//carufredsel main
+	$('#caroufredsel_slider1').carouFredSel({
+		auto: {
+			timeoutDuration: 9000
+		},
+		responsive: true,
+		direction:	"left",
+		//prev: '.prev1',
+		//next: '.next1',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo",
+			fx: "fade"
+		},
+		items: {
+        	width: '1000',
+			height: 'variable',	//	optionally resize item-height
+			visible: {
+				min: 1,
+				max: 1
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			},
+		pagination  : ".pagination1"
+
+
+	});
+
+	//	carouFredSel specials
+	$('#specials .carousel.main ul').carouFredSel({
+		auto: {
+			timeoutDuration: 8000
+		},
+		responsive: true,
+		prev: '.specials_prev',
+		next: '.specials_next',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo"
+		},
+		items: {
+        	width: '350',
+			height: 'variable',	//	optionally resize item-height
+			visible: {
+				min: 1,
+				max: 3
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			}
+	});
+
+
+
+
+
+	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+	function updateSizes_vat(){
+		$('#caroufredsel_slider1').trigger("updateSizes");
+		$('#specials .carousel.main ul').trigger("updateSizes");
+
+	}
+	updateSizes_vat();
+
+
+}); //
+$(window).load(function() {
+	//
+
+}); //
+</script>
+
+
+    <script>
+        $(document).ready(function() {
+        });
+    </script>
+
+<!--[if lt IE 8]>
+		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>  
+	<![endif]-->    
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+  <link rel="stylesheet" href="/static/css/ie.css" type="text/css" media="screen">
+<![endif]-->
+</head>
+
+<body class="front">
+<div id="main">
+
+<div class="bg1"><img src="../static/img/bg1.jpg" alt="" class="img"><div class="pattern1"></div></div>
+
+<div class="top1_wrapper">
+<div class="top1_inner">
+<div class="container">
+<div class="top1 clearfix">
+	
+<div class="top2 clearfix">
+	
+<header><div class="logo_wrapper"><a href="../index.html" class="logo"><img src="../static/img/logo.png" alt=""></a></div></header>
+
+<div class="block2 clearfix">
+<div class="book1_wrapper"><a href="contacts.html#contact" class="book1"><span>Prenota Online</span></a></div>
+<div class="phone1">
+	Call us <span style="white-space:nowrap">+39 338 96 69 491</span><br>
+    Email us <a href="contacts.html#contact">info@ncc4roma.it</a>
+</div>
+</div>
+
+</div>
+
+<div class="menu_wrapper">
+<div class="search-form-wrapper">
+<form id="search-form" action="http://localhost:8000/en/search.html" method="GET" accept-charset="utf-8" class="navbar-form" >
+						<input type="text" name="s" value="Search" onBlur="if(this.value=='') this.value='Search'" onFocus="if(this.value =='Search' ) this.value=''">
+						<a href="index.html#" onClick="document.getElementById('search-form').submit()"></a>
+					</form>
+</div>
+<div class="navbar navbar_">
+	<div class="navbar-inner navbar-inner_">
+		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<div class="nav-collapse nav-collapse_ collapse">
+            <ul class="nav sf-menu clearfix">
+            
+                <li class="active "><a href="index.html">Home</a>
+                
+                </li>
+            
+                <li class=" "><a href="who-we-are.html">Who we are</a>
+                
+                </li>
+            
+                <li class=" sub-menu sub-menu-1"><a href="services.html">Services</a>
+                
+                    <ul>
+                        
+                            <li class=" "><a href="service-24-hours.html">24 hours service</a></li>
+                            
+                        
+                            <li class=" "><a href="service-transfer.html">Airport transfers</a></li>
+                            
+                        
+                            <li class=" "><a href="service-wherever-you-need.html">Wherever you need</a></li>
+                            
+                        
+                            <li class=" "><a href="service-wheelchair.html">Wheelchair accessible vehicles</a></li>
+                            
+                        
+                            <li class=" "><a href="service-black-luxury-car.html">Black luxury car service</a></li>
+                            
+                        
+                    </ul>
+                
+                </li>
+            
+                <li class=" sub-menu sub-menu-1"><a href="contacts.html">Contact</a>
+                
+                    <ul>
+                        
+                            <li class=" "><a href="contacts.html#contact">Submit a request</a></li>
+                            
+                        
+                            <li class=" "><a href="index.html#follow-us">Follow us</a></li>
+                            
+                        
+                    </ul>
+                
+                </li>
+            
+                <li class="sub-menu sub-menu-1"><a href="index.html#"><img src="../static/img/flags/en.png" class="flag" alt="English" /><span class="flag"> English</span></a>
+                    <ul>
+                    
+                        
+                            <li><a href="../index.html"><img src="../static/img/flags/it.png" class="flag" alt="Italiano" /><span class="flag"> Italiano</span></a></li>
+                        
+                    
+                        
+                    
+                    </ul>
+                </li>
+            </ul>
+		</div>
+	</div>
+</div>
+</div>
+
+    
+<div class="caroufredsel_slider1_wrapper">
+	<ul id="caroufredsel_slider1" class="clearfix">
+		<li>
+			<div class="caroufredsel_slide1 clearfix">
+				<div class="block1">
+					<figure><img src="../static/img/slide02.jpg" alt="" class="img"></figure>
+				</div>
+				<div class="block2">
+					<div class="caption">
+                        
+						<div class="txt1">Affidabilità</div>
+						<div class="txt2">tutti i giorni<br>24 ore al giorno</div>
+                        
+						<a href="service-24-hours.html" class="button0">details</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="caroufredsel_slide1 clearfix">
+				<div class="block1">
+					<figure><img src="../static/img/slide03.jpg" alt="" class="img"></figure>
+				</div>
+				<div class="block2">
+					<div class="caption">
+                        
+						<div class="txt1">Airport</div>
+						<div class="txt2">transfer</div>
+                        
+						<a href="service-transfer.html" class="button0">details</a>
+					</div>
+				</div>
+			</div>
+		</li>
+        <li>
+			<div class="caroufredsel_slide1 clearfix">
+				<div class="block1">
+					<figure><img src="../static/img/slide01.jpg" alt="" class="img"></figure>
+				</div>
+				<div class="block2">
+					<div class="caption">
+                        
+						<div class="txt1">We will take you</div>
+						<div class="txt2">Wherever<br>you need</div>
+                        
+						<a href="service-wherever-you-need.html" class="button0">details</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="pagination1" id="caroufredsel_pag1"></div>
+</div>
+
+
+</div>	
+</div>	
+</div>	
+<div class="hl1"></div>
+</div>
+
+<div class="center1_wrapper">
+<div class="center1_inner">
+
+    
+
+
+
+<div class="hl2 clearfix"></div>
+
+<div class="slogan1_wrapper clearfix">
+<div class="container">
+<div class="slogan1">Prenota <a href="contacts.html#contact">ONLINE</a> o Chiama il <b style="white-space:nowrap">+39 338 96 69 491</b></div>
+</div>
+</div>
+
+
+<div id="content">
+<div class="container">
+
+
+<div class="row">
+<div class="span8">
+
+<h2>welcome</h2>
+
+<div class="thumb1">
+	<div class="thumbnail clearfix">
+		<figure class="img-polaroid"><img src="../static/img/home01.jpg" alt=""></figure>
+		<div class="caption">
+			<p>
+                
+                I nostri servizi di noleggio con conducente sono disponibili 24 ore al giorno, 365 giorni l'anno, con tariffe personalizzate e competitive non soggette a variazioni dovute al traffico. Tutte le auto sono recenti, dotati di ogni optional per viaggiare comodi in totale sicurezza con auto nuove sempre in ordine e regolarmente controllate. Per la vostra e la nostra sicurezza tutte le auto sono assicurate con massimali al vertice della categoria.
+                
+			</p>
+			<a href="services.html" class="button1">details</a>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="span4">
+
+<h2>Nuovi Servizi</h2>
+
+<ul class="ul1">
+    
+	    <li><a href="service-24-hours.html">24 hours service</a></li>
+    
+	    <li><a href="service-transfer.html">Airport transfers</a></li>
+    
+	    <li><a href="service-wherever-you-need.html">Wherever you need</a></li>
+    
+	    <li><a href="service-wheelchair.html">Wheelchair accessible vehicles</a></li>
+    
+	    <li><a href="service-black-luxury-car.html">Black luxury car service</a></li>
+    
+    <li><a href="specials.html">Speciali</a></li>
+</ul>
+
+<br>
+
+<a href="services.html" class="button1">details</a>
+
+</div>
+</div>
+
+
+</div>
+</div>	
+
+    
+
+</div>
+<div class="hl3"></div>
+</div>
+
+<div class="bot1">
+<div class="container">
+<div class="row">
+<div class="span4">
+	
+<div class="bot1_title">Our Services</div>
+
+<ul class="ul0">
+    
+	    <li><a href="service-24-hours.html">24 hours service</a></li>
+    
+	    <li><a href="service-transfer.html">Airport transfers</a></li>
+    
+	    <li><a href="service-wherever-you-need.html">Wherever you need</a></li>
+    
+	    <li><a href="service-wheelchair.html">Wheelchair accessible vehicles</a></li>
+    
+	    <li><a href="service-black-luxury-car.html">Black luxury car service</a></li>
+    
+	<li><a href="contacts.html#contact">Prenota Online</a></li>
+	
+</ul>
+
+</div>
+
+<div class="span5">
+	
+<div class="bot1_title">Contact</div>
+
+<div class="phone2">+39 338 96 69 491</div>
+
+<div class="contacts1">
+<div class="txt clearfix"><div class="txt1">Contact us:</div><div class="txt2"><a href="contacts.html#contact">info@ncc4roma.it</a></div></div>
+<div class="txt clearfix"><div class="txt1">Where?:</div><div class="txt2">Rome</div></div>
+</div>
+
+</div>
+<div class="span3">
+
+<a name="follow-us"></a>
+<div class="bot1_title">Follow us</div>
+
+<div class="social_wrapper">
+	<ul class="social clearfix">    
+	    <li>
+	    	<a href="index.html#" class="clearfix">
+	    		<img src="../static/img/social_ic1.png">
+	    		<div class="caption">Twitter</div>
+	    	</a>
+		</li>
+		<li>
+	    	<a href="index.html#" class="clearfix">
+	    		<img src="../static/img/social_ic2.png">
+	    		<div class="caption">Facebook</div>
+	    	</a>
+		</li>
+		<li>
+	    	<a href="index.html#" class="clearfix">
+	    		<img src="../static/img/social_ic3.png">
+	    		<div class="caption">Google +</div>
+	    	</a>
+		</li>
+  
+	</ul>
+</div>
+
+</div>	
+</div>	
+</div>	
+</div>
+
+<div class="bot2">
+<div class="container">
+<div class="row">
+<div class="span12">
+	
+<footer><div class="copyright">Copyright &copy; 2015. NCC 4 ROMA &nbsp; / &nbsp; <a href="privacy.html">Privacy Policy</a></div></footer>
+	
+</div>	
+</div>	
+</div>	
+</div>
+	
+</div>
+<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>
